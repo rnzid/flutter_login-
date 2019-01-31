@@ -12,9 +12,8 @@ class ProfilePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             CircleAvatar(backgroundImage: NetworkImage("https://img0.imguh.com/2019/01/31/d9b651d42fb594de0.jpg",),),
-            Text("Ranjit dangol")          
+            Text("Ranjit dangol")   
           ],
-          
         ),
       ),
     );

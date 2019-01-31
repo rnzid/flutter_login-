@@ -3,6 +3,7 @@ import './home.dart';
 import './login.dart';
 import './favPage.dart';
 import './About.dart';
+import './profile.dart';
 
 class ListPage extends StatelessWidget {
   @override
@@ -17,8 +18,14 @@ class ListPage extends StatelessWidget {
           UserAccountsDrawerHeader(
             accountName: Text("Ranjit dangol"),
             accountEmail: Text("ranjitdangol13@gmail.com"),
-            currentAccountPicture: CircleAvatar(backgroundColor: Colors.green,
-            child: Text('R'),),
+            decoration: BoxDecoration
+            (image: DecorationImage(
+              fit: BoxFit.fill,
+              image: NetworkImage("https://img0.imguh.com/2019/01/31/FB_IMG_150511930948768fe19217bd1f17b.jpg"))),
+            currentAccountPicture: GestureDetector(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => ProfilePage())),
+              child: CircleAvatar(backgroundImage: NetworkImage("https://img0.imguh.com/2019/01/31/d9b651d42fb594de0.jpg"),),
+            ),
             
           ),
           
