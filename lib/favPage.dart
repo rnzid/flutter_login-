@@ -84,7 +84,7 @@ class FavPage extends StatelessWidget {
           ListTile(
             title: Text("About us"),
             trailing: Icon(Icons.contacts),
-            onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => AboutPage()))
+            onTap: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => AboutPage()))
           ),
           Divider(),
           ListTile(

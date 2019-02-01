@@ -50,13 +50,13 @@ class HomePage extends StatelessWidget {
           ListTile(
             title: Text("Home page"),
             trailing: Icon(Icons.home),
-           onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => HomePage()))
+           onTap: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => HomePage()))
           ),
           Divider(),
           ListTile(
             title: Text("List"),
             trailing: Icon(Icons.list),
-            onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => ListPage()))
+            onTap: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => ListPage()))
           ),
           Divider(),
           ListTile(
@@ -73,7 +73,7 @@ class HomePage extends StatelessWidget {
           ListTile(
             title: Text("About us"),
             trailing: Icon(Icons.contacts),
-            onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => AboutPage()))
+            onTap: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => AboutPage()))
           ),
           Divider(),
           ListTile(

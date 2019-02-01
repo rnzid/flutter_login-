@@ -38,7 +38,7 @@ class AboutPage extends StatelessWidget{
             ),
             child: Text("Back Button"),
             color: Colors.blue,
-            onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => HomePage())),
+            onPressed: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => HomePage())),
           ),
           IconButton(
             color: Colors.deepPurple,
