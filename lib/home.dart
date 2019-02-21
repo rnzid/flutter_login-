@@ -6,6 +6,28 @@ import './profile.dart';
 import './About.dart';
 
 class HomePage extends StatelessWidget {
+    _showDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("LOGOUT"),
+          content: Text("Are you sure you want to logout?"),
+          actions: <Widget>[
+            FlatButton(
+              child: Text("Yes"),
+              onPressed: () => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context)=>LoginPage())),
+            ),
+            FlatButton(
+              child: Text("No"),
+              onPressed: () => Navigator.pop(context),
+            ),
+          ],
+        );
+      },
+    barrierDismissible: false,
+    );
+  }
   @override
   Widget build(BuildContext context) {
     Widget titlesection = Container(
@@ -63,8 +85,7 @@ class HomePage extends StatelessWidget {
             title: Text("Favorite"),
             trailing: Icon(Icons.star_border),
           onTap: (){
-              Navigator.pushReplacement(context, MaterialPageRoute(
-                      builder: (BuildContext context)=>FavPage()  
+              Navigator.pushReplacement(context, MaterialPageRoute( builder: (BuildContext context)=>FavPage()  
                ) 
                );
                }
@@ -79,12 +100,7 @@ class HomePage extends StatelessWidget {
           ListTile(
             title: Text("Logout"),
             trailing: Icon(Icons.arrow_back),
-            onTap: (){
-              Navigator.pushReplacement(context, MaterialPageRoute(
-                      builder: (BuildContext context)=>LoginPage()  
-               ) 
-               );
-               }
+            onTap: () => _showDialog(context),
           ),
           Divider(),
         ],
