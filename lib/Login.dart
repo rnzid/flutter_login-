@@ -13,10 +13,10 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Login First'),
-        elevation: 5.0,
-      ),
+      // appBar: AppBar(
+      //   title: Text('Login First'),
+       // elevation: 5.0,
+     // ),
       body: Container(
         height: double.infinity,
         decoration: BoxDecoration(
@@ -29,6 +29,11 @@ class _LoginPageState extends State<LoginPage> {
           padding: EdgeInsets.all(20.0),
           child: Column(
             children: <Widget>[
+              SizedBox(
+                height: 30.0,
+              ),
+              Text("Photo Login",style: TextStyle(fontSize: 30,color: Colors.black87,  ),textAlign: TextAlign.center,),
+            
               SizedBox(
                 height: 30.0,
               ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-//import 'package:listview/item_details.dart';
 import './home.dart';
 import './login.dart';
 import './favPage.dart';
